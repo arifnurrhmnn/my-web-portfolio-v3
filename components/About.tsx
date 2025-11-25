@@ -1,0 +1,111 @@
+"use client";
+
+import React from "react";
+import { motion } from "motion/react";
+import { Download } from "lucide-react";
+import Image from "next/image";
+import { Button } from "./ui/button";
+
+export function About() {
+  return (
+    <section id="about" className="py-20 bg-zinc-950 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-b from-emerald-900/5 to-transparent -z-10" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row gap-16 items-center">
+          {/* Image Side */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="w-full md:w-2/5 relative"
+          >
+            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-zinc-800 group">
+              <div className="absolute inset-0 bg-emerald-500/10 group-hover:bg-transparent transition-colors duration-500" />
+              {/* Using a high quality professional portrait consistent with the theme */}
+              <Image
+                src="https://images.unsplash.com/photo-1625850902501-cc6baef3e3b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBhc2lhbiUyMGRldmVsb3BlciUyMHBvcnRyYWl0JTIwc3R1ZGlvJTIwaGVhZHNob3R8ZW58MXx8fHwxNzYzOTY1Njg0fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="Arif Nur Rohman"
+                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100"
+                width={400}
+                height={500}
+              />
+
+              {/* Corner accents */}
+              <div className="absolute -top-2 -left-2 w-12 h-12 border-t-4 border-l-4 border-emerald-500/50 rounded-tl-xl z-10" />
+              <div className="absolute -bottom-2 -right-2 w-12 h-12 border-b-4 border-r-4 border-emerald-500/50 rounded-br-xl z-10" />
+            </div>
+          </motion.div>
+
+          {/* Text Side */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="w-full md:w-3/5 space-y-8"
+          >
+            <div>
+              <span className="text-emerald-500 font-medium tracking-wider uppercase text-sm">
+                My Introduction
+              </span>
+              <h2 className="text-3xl md:text-5xl font-bold text-white mt-2 mb-6">
+                About Me
+              </h2>
+              <div className="h-1 w-20 bg-emerald-500 rounded-full" />
+            </div>
+
+            <div className="space-y-6 text-zinc-400 text-lg leading-relaxed">
+              <p>
+                Hello! My name is{" "}
+                <strong className="text-white">Arif Nur Rohman</strong>, and I
+                am a <strong className="text-white">Frontend Engineer</strong>{" "}
+                with over 3 years of professional experience, currently working
+                at <strong className="text-white">Arkademi</strong>.
+              </p>
+              <p>
+                My journey in technology began during high school when I majored
+                in Software Engineering, where I learned the fundamentals of
+                programming. I later pursued a degree in Informatics at{" "}
+                <strong className="text-white">
+                  Universitas Amikom Yogyakarta
+                </strong>
+                , graduating in 2021 with a GPA of{" "}
+                <strong className="text-emerald-400">3.86</strong>.
+              </p>
+              <p>
+                In my career, I have contributed to significant projects such as
+                migrating Arkademi&apos;s website from WordPress to React.js and
+                transitioning it to Next.js to enhance performance and
+                scalability. I specialize in creating responsive,
+                high-performance websites with a focus on SEO optimization.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-6 pt-4">
+              <div className="p-4 bg-zinc-900/50 rounded-xl border border-zinc-800">
+                <h3 className="text-2xl font-bold text-white mb-1">03+</h3>
+                <p className="text-zinc-500 text-sm">Years Experience</p>
+              </div>
+              <div className="p-4 bg-zinc-900/50 rounded-xl border border-zinc-800">
+                <h3 className="text-2xl font-bold text-white mb-1">20+</h3>
+                <p className="text-zinc-500 text-sm">Projects Completed</p>
+              </div>
+            </div>
+
+            <div className="pt-6">
+              <Button
+                size="lg"
+                className="bg-emerald-600 hover:bg-emerald-700 text-white rounded-full px-8"
+              >
+                <Download className="mr-2 h-4 w-4" /> Download Resume
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
