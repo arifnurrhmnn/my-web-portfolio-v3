@@ -50,7 +50,7 @@ export function Experience() {
 
         <div className="relative space-y-12">
           {/* Vertical Line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-zinc-800 transform -translate-x-1/2 md:translate-x-0" />
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-zinc-800 transform -translate-x-1/2" />
 
           {experiences.map((exp, index) => (
             <motion.div
@@ -59,12 +59,12 @@ export function Experience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={`relative flex flex-col md:flex-row gap-8 ${
+              className={`relative flex flex-col md:flex-row gap-8 items-start ${
                 index % 2 === 0 ? "md:flex-row-reverse" : ""
               }`}
             >
               {/* Timeline Dot */}
-              <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-emerald-500 rounded-full border-4 border-zinc-950 transform -translate-x-1/2 md:translate-x-[0.5px] mt-1.5 z-10" />
+              <div className="absolute left-4 md:left-1/2 top-6 w-4 h-4 bg-emerald-500 rounded-full border-4 border-zinc-950 transform -translate-x-1/2 z-10" />
 
               {/* Content */}
               <div className="ml-12 md:ml-0 md:w-1/2">
@@ -73,16 +73,16 @@ export function Experience() {
                     index % 2 === 0 ? "md:mr-8" : "md:ml-8"
                   }`}
                 >
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-xl font-bold text-white">{exp.role}</h3>
-                    <span className="flex items-center text-xs text-emerald-400 bg-emerald-950/30 px-2 py-1 rounded-full border border-emerald-900">
-                      <Calendar className="w-3 h-3 mr-1" /> {exp.period}
-                    </span>
-                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    {exp.role}
+                  </h3>
                   <p className="text-zinc-300 font-medium mb-3 flex items-center">
                     <Briefcase className="w-4 h-4 mr-2 text-zinc-500" />
                     {exp.company}
                   </p>
+                  <span className="inline-flex items-center text-xs text-emerald-400 bg-emerald-950/30 px-2 py-1 rounded-full border border-emerald-900 mb-4 w-fit">
+                    <Calendar className="w-3 h-3 mr-1" /> {exp.period}
+                  </span>
                   <p className="text-zinc-400 text-sm leading-relaxed mb-4">
                     {exp.description}
                   </p>

@@ -330,15 +330,22 @@ export function Hero() {
               ease: "easeInOut",
               delay: 1,
             }}
-            className="absolute -left-8 bottom-32 p-3 bg-zinc-800/80 backdrop-blur rounded-2xl border border-zinc-700 shadow-lg"
+            className="absolute -left-8 bottom-32 p-3 bg-zinc-800/80 backdrop-blur rounded-2xl border border-zinc-700 shadow-lg flex items-center justify-center"
+            style={{ minWidth: "56px", minHeight: "56px" }}
           >
-            <Image
-              src="https://cdn.simpleicons.org/react/61DAFB"
-              className="w-8 h-8"
-              alt="React"
-              width={32}
-              height={32}
-            />
+            <div className="w-8 h-8 relative bg-blue-500/20">
+              <Image
+                src="https://cdn.simpleicons.org/react/61DAFB"
+                className="object-contain"
+                alt="React"
+                fill
+                sizes="32px"
+                unoptimized
+                priority
+                onLoad={() => console.log("React icon loaded")}
+                onError={(e) => console.log("React icon error:", e)}
+              />
+            </div>
           </motion.div>
 
           <motion.div
@@ -349,15 +356,19 @@ export function Hero() {
               ease: "easeInOut",
               delay: 2,
             }}
-            className="absolute left-10 bottom-10 p-3 bg-zinc-800/80 backdrop-blur rounded-2xl border border-zinc-700 shadow-lg"
+            className="absolute left-10 bottom-10 p-3 bg-zinc-800/80 backdrop-blur rounded-2xl border border-zinc-700 shadow-lg flex items-center justify-center"
           >
-            <Image
-              src="https://cdn.simpleicons.org/typescript/3178C6"
-              className="w-8 h-8"
-              alt="TS"
-              width={32}
-              height={32}
-            />
+            <div className="w-8 h-8 relative">
+              <Image
+                src="https://cdn.simpleicons.org/typescript/3178C6"
+                className="object-contain"
+                alt="TS"
+                fill
+                sizes="32px"
+                unoptimized
+                priority
+              />
+            </div>
           </motion.div>
 
           {/* 3. Status Badge */}

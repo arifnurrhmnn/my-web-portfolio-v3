@@ -260,7 +260,7 @@
     );
     font-feature-settings: var(--default-mono-font-feature-settings, normal);
     font-variation-settings: var(
-      --default-mono-font-variation-settings,
+      --default-mono--font-variation-settings,
       normal
     );
     font-size: 1em;
@@ -2064,52 +2064,32 @@
   }
 
   .grayscale {
-    --tw-grayscale: grayscale(100%);
-    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
-      var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert)
-      var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+    --tw-grayscale: grayscale(100%) !important;
+    filter: grayscale(100%) !important;
   }
 
-  .backdrop-blur {
-    --tw-backdrop-blur: blur(8px);
-    -webkit-backdrop-filter: var(--tw-backdrop-blur)
-      var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
-      var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate)
-      var(--tw-backdrop-invert) var(--tw-backdrop-opacity)
-      var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-    backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
-      var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
-      var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
-      var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
-      var(--tw-backdrop-sepia);
+  .hover\:grayscale-0:hover {
+    --tw-grayscale: grayscale(0%) !important;
+    filter: grayscale(0%) !important;
   }
 
-  .backdrop-blur-md {
-    --tw-backdrop-blur: blur(var(--blur-md));
-    -webkit-backdrop-filter: var(--tw-backdrop-blur)
-      var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
-      var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate)
-      var(--tw-backdrop-invert) var(--tw-backdrop-opacity)
-      var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-    backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
-      var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
-      var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
-      var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
-      var(--tw-backdrop-sepia);
+  .group-hover\:grayscale-0:is(:where(.group):hover *) {
+    --tw-grayscale: grayscale(0%) !important;
+    filter: grayscale(0%) !important;
   }
 
-  .backdrop-blur-sm {
-    --tw-backdrop-blur: blur(var(--blur-sm));
-    -webkit-backdrop-filter: var(--tw-backdrop-blur)
-      var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
-      var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate)
-      var(--tw-backdrop-invert) var(--tw-backdrop-opacity)
-      var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-    backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
-      var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
-      var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
-      var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
-      var(--tw-backdrop-sepia);
+  /* Ensure filter support with fallback */
+  @supports not (filter: grayscale(1)) {
+    .grayscale {
+      opacity: 0.7;
+      filter: contrast(0.5) brightness(0.8);
+    }
+
+    .hover\:grayscale-0:hover,
+    .group-hover\:grayscale-0:is(:where(.group):hover *) {
+      opacity: 1;
+      filter: contrast(1) brightness(1);
+    }
   }
 
   .transition {
@@ -2274,10 +2254,8 @@
 
   @media (hover: hover) {
     .group-hover\:grayscale-0:is(:where(.group):hover *) {
-      --tw-grayscale: grayscale(0%);
-      filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
-        var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert)
-        var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+      --tw-grayscale: grayscale(0%) !important;
+      filter: grayscale(0%) !important;
     }
   }
 
@@ -2423,6 +2401,23 @@
     }
   }
 
+  @media (hover: hover) {
+    .hover\:text-accent-foreground:hover {
+      color: var(--accent-foreground);
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:text-blue-400:hover {
+      color: var(--color-blue-400);
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:text-blue-500:hover {
+      color: var(--color-blue-500);
+    }
+  }
   @media (hover: hover) {
     .hover\:text-accent-foreground:hover {
       color: var(--accent-foreground);

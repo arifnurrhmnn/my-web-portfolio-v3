@@ -80,19 +80,20 @@ export function About() {
                 migrating Arkademi&apos;s website from WordPress to React.js and
                 transitioning it to Next.js to enhance performance and
                 scalability. I specialize in creating responsive,
-                high-performance websites with a focus on SEO optimization.
+                high-performance websites with a focus on SEO optimization and
+                have collaborated closely with backend and product teams to
+                ensure successful project execution.
               </p>
-            </div>
-
-            <div className="grid grid-cols-2 gap-6 pt-4">
-              <div className="p-4 bg-zinc-900/50 rounded-xl border border-zinc-800">
-                <h3 className="text-2xl font-bold text-white mb-1">03+</h3>
-                <p className="text-zinc-500 text-sm">Years Experience</p>
-              </div>
-              <div className="p-4 bg-zinc-900/50 rounded-xl border border-zinc-800">
-                <h3 className="text-2xl font-bold text-white mb-1">20+</h3>
-                <p className="text-zinc-500 text-sm">Projects Completed</p>
-              </div>
+              <p>
+                Additionally, I have managed freelance projects, delivering
+                tailored web solutions for clients both locally and
+                internationally. I am passionate about building user-centric web
+                applications and continuously improving my skills to stay ahead
+                in the ever-evolving tech landscape.{" "}
+                <strong className="text-emerald-400">
+                  Let&apos;s create something amazing together!
+                </strong>
+              </p>
             </div>
 
             <div className="pt-6">
