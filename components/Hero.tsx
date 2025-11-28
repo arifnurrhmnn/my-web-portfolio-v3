@@ -40,7 +40,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-[110vh] flex items-center bg-zinc-950 pt-20 overflow-hidden selection:bg-emerald-500/30">
+    <section className="relative min-h-[100vh] flex items-center bg-zinc-950 pt-16 overflow-hidden selection:bg-emerald-500/30">
       {/* Dynamic Spotlight Background */}
       <div
         className="pointer-events-none fixed inset-0 z-0 transition-opacity duration-300"
@@ -81,10 +81,15 @@ export function Hero() {
               </h1>
             </div>
 
-            <p className="text-zinc-400 text-lg leading-relaxed max-w-xl">
-              Specializing in building exceptional digital experiences. I
-              combine design sensibility with engineering robustness to create
-              scalable, pixel-perfect React applications.
+            <p className="text-zinc-400 text-lg leading-relaxed max-w-2xl">
+              I am a Frontend Engineer from Indonesia with over 3 years of
+              experience in the field. Since 2022, I have been working at
+              Arkademi as a Frontend Engineer, and since 2023, I have been
+              taking on freelance projects as part of my side hustle. I
+              specialize in working with the Next.js framework and am passionate
+              about delivering high-quality, user-centric web solutions. I am
+              excited about the opportunity to collaborate and bring your ideas
+              to life.
             </p>
           </motion.div>
 
