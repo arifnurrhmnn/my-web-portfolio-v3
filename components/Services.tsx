@@ -13,9 +13,9 @@ const services = [
   },
   {
     icon: Smartphone,
-    title: "Mobile-First Design",
+    title: "Responsive Design",
     description:
-      "Ensuring your application looks and feels amazing on smartphones and tablets with responsive patterns.",
+      "Creating adaptive layouts that provide optimal viewing experience across all devices and screen sizes.",
   },
   {
     icon: Zap,

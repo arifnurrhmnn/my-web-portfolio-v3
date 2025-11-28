@@ -89,26 +89,15 @@ export const getStaticMetadata = ({
 // Default metadata untuk homepage
 export const defaultMetadata = getStaticMetadata({
   title: {
-    default: "Arif Nur Rohman - Frontend Engineer & Web Developer",
+    default: "Arif Nur Rohman - Frontend Engineer",
     template: "%s | Arif Nur Rohman - Frontend Engineer",
   },
   description:
     "Frontend Engineer with 3+ years experience specializing in React.js, Next.js, and modern web development. Based in Indonesia, delivering high-performance web applications with excellent user experience.",
   keywords: [
-    "Frontend Engineer",
-    "Frontend Developer",
-    "React Developer",
-    "Next.js Developer",
-    "JavaScript Developer",
-    "Web Developer Indonesia",
     "Arif Nur Rohman",
-    "React.js",
-    "TypeScript",
-    "Tailwind CSS",
-    "Web Development",
-    "User Interface Design",
-    "Responsive Design",
-    "Portfolio",
+    "Frontend Engineer",
+    "React.js & Next.js Developer",
   ],
   canonical: "",
 });

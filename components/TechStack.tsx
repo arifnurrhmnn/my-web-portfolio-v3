@@ -68,7 +68,7 @@ export function TechStack() {
     <section className="py-12 bg-zinc-950 border-y border-zinc-900 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 mb-8">
         <p className="text-center text-zinc-500 text-sm uppercase tracking-wider">
-          Powered by modern technologies
+          SKILLS & TECHNOLOGIES
         </p>
       </div>
 
@@ -80,11 +80,7 @@ export function TechStack() {
               key={index}
               className="flex items-center gap-3 text-zinc-400 grayscale hover:grayscale-0 transition-all duration-300 hover:text-white cursor-pointer"
             >
-              <img
-                src={tech.icon}
-                alt={tech.name}
-                className="w-8 h-8"
-              />
+              <img src={tech.icon} alt={tech.name} className="w-8 h-8" />
               <span className="text-xl font-semibold hidden md:block">
                 {tech.name}
               </span>
@@ -97,11 +93,7 @@ export function TechStack() {
               key={`dup-${index}`}
               className="flex items-center gap-3 text-zinc-400 grayscale hover:grayscale-0 transition-all duration-300 hover:text-white cursor-pointer"
             >
-              <img
-                src={tech.icon}
-                alt={tech.name}
-                className="w-8 h-8"
-              />
+              <img src={tech.icon} alt={tech.name} className="w-8 h-8" />
               <span className="text-xl font-semibold hidden md:block">
                 {tech.name}
               </span>
@@ -114,11 +106,7 @@ export function TechStack() {
               key={`dup-2-${index}`}
               className="flex items-center gap-3 text-zinc-400 grayscale hover:grayscale-0 transition-all duration-300 hover:text-white cursor-pointer"
             >
-              <img
-                src={tech.icon}
-                alt={tech.name}
-                className="w-8 h-8"
-              />
+              <img src={tech.icon} alt={tech.name} className="w-8 h-8" />
               <span className="text-xl font-semibold hidden md:block">
                 {tech.name}
               </span>

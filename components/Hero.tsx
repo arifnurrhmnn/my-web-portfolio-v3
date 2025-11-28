@@ -103,6 +103,10 @@ export function Hero() {
               <Button
                 size="lg"
                 className="h-12 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg px-8 text-base group"
+                onClick={() => {
+                  const projectsSection = document.getElementById("projects");
+                  projectsSection?.scrollIntoView({ behavior: "smooth" });
+                }}
               >
                 View Projects{" "}
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -111,6 +115,9 @@ export function Hero() {
                 variant="outline"
                 size="lg"
                 className="h-12 border-zinc-800 bg-zinc-900/50 text-zinc-300 hover:text-white hover:bg-zinc-800 rounded-lg px-8 text-base"
+                onClick={() => {
+                  window.location.href = "mailto:arifnur.rhmnn@gmail.com";
+                }}
               >
                 <Mail className="mr-2 w-4 h-4" /> Contact Me
               </Button>
@@ -118,13 +125,17 @@ export function Hero() {
 
             <div className="flex gap-6 items-center">
               <a
-                href="#"
+                href="https://github.com/arifnurrhmnn"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-zinc-500 hover:text-emerald-500 transition-colors"
               >
                 <Github size={24} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/arifnurrohman"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-zinc-500 hover:text-blue-500 transition-colors"
               >
                 <Linkedin size={24} />

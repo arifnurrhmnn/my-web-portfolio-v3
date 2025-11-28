@@ -43,6 +43,9 @@ export function Navbar() {
               <Button
                 variant="default"
                 className="bg-emerald-600 hover:bg-emerald-700 text-white rounded-full"
+                onClick={() => {
+                  window.location.href = "mailto:arifnur.rhmnn@gmail.com";
+                }}
               >
                 Contact Me
               </Button>
@@ -82,6 +85,10 @@ export function Navbar() {
             <Button
               variant="default"
               className="w-full mt-4 bg-emerald-600 hover:bg-emerald-700 text-white"
+              onClick={() => {
+                window.location.href = "mailto:arifnur.rhmnn@gmail.com";
+                setIsOpen(false);
+              }}
             >
               Contact Me
             </Button>

@@ -13,8 +13,8 @@ export function Experience() {
             Professional Experience
           </h2>
           <p className="text-zinc-400 max-w-2xl mx-auto">
-            My career journey, highlighting my core role at Arkademi and diverse
-            freelance collaborations.
+            My professional journey and technical expertise across various
+            projects and collaborations.
           </p>
         </div>
 
@@ -51,19 +51,25 @@ export function Experience() {
                 </div>
 
                 <p className="text-zinc-300 leading-relaxed mb-6">
-                  Developing and maintaining the core learning management system
-                  (LMS) for one of Indonesia&apos;s leading EdTech platforms.
-                  Focused on scalability, performance, and delivering a seamless
-                  user experience for thousands of students.
+                  At Arkademi, I started by working on the migration of the
+                  company&apos;s website from WordPress to React.js, utilizing
+                  technologies such as React.js, JavaScript, Redux, Bootstrap,
+                  and SCSS. This involved collaborating closely with the backend
+                  team for API integration and working with the product team to
+                  plan and discuss upcoming features. As the migration
+                  progressed, we transitioned several websites to Next.js to
+                  enhance performance and scalability.
                 </p>
 
                 {/* Key Achievements */}
                 <div className="grid md:grid-cols-2 gap-4 mb-6">
                   {[
-                    "Spearheaded the migration to Next.js, improving load times by 40%",
-                    "Implemented a comprehensive design system using Tailwind CSS",
-                    "Integrated real-time video streaming capabilities",
-                    "Optimized payment gateway flows for higher conversion rates",
+                    "Developing responsive websites and high-performance websites with a focus on SEO optimization",
+                    "Integrating with APIs and third-party libraries",
+                    "Migrating the website to React.js and later transitioning to Next.js to enhance performance, utilizing TypeScript for better code quality",
+                    "Contributing to the development of Arkademi's website in partnership with Kartu Prakerja, focusing on meeting the specific needs of the partner",
+                    "Developing an internal company website to assist with operational processes",
+                    "Managing tasks within my frontend team and collaborating with product and tech teams",
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-emerald-500 mt-0.5 shrink-0" />
@@ -72,13 +78,25 @@ export function Experience() {
                   ))}
                 </div>
 
+                <p className="text-zinc-300 leading-relaxed mb-6">
+                  Throughout my time at Arkademi, I gained experience in
+                  responsive web design, debugging, problem-solving, team
+                  collaboration, project management, web performance
+                  optimization, and SEO, all of which have been crucial in
+                  delivering high-quality web solutions.
+                </p>
+
                 <div className="mt-8 pt-6 border-t border-zinc-800 flex flex-wrap gap-2">
                   {[
                     "React",
                     "Next.js",
                     "TypeScript",
                     "Redux Toolkit",
+                    "Zustand",
                     "Tailwind CSS",
+                    "Bootstrap",
+                    "SCSS",
+                    "AI Integration",
                   ].map((tech) => (
                     <span
                       key={tech}
