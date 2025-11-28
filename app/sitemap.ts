@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://arifnurrohman.dev";
+  const baseUrl = "https://arifnurrohman.com";
 
   return [
     {
@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1,
     },
+    // Add anchor links for SEO context (even though single page)
     {
       url: `${baseUrl}/#about`,
       lastModified: new Date(),

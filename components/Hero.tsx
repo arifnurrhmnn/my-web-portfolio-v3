@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
@@ -337,7 +337,7 @@ export function Hero() {
               <Image
                 src="https://cdn.simpleicons.org/nextdotjs/white"
                 className="object-contain"
-                alt="Next.js"
+                alt="Next.js framework logo - modern React framework for web development"
                 fill
                 sizes="32px"
                 unoptimized
@@ -362,7 +362,7 @@ export function Hero() {
               <Image
                 src="https://cdn.simpleicons.org/typescript/3178C6"
                 className="object-contain"
-                alt="TS"
+                alt="TypeScript programming language logo - strongly typed JavaScript"
                 fill
                 sizes="32px"
                 unoptimized

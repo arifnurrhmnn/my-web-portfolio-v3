@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { Layout, Smartphone, Zap, Code, Database, Globe } from "lucide-react";
 
 const services = [

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { Download } from "lucide-react";
 import Image from "next/image";
 import { Button } from "./ui/button";
@@ -27,10 +27,11 @@ export function About() {
               {/* Using a high quality professional portrait consistent with the theme */}
               <Image
                 src="https://images.unsplash.com/photo-1625850902501-cc6baef3e3b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBhc2lhbiUyMGRldmVsb3BlciUyMHBvcnRyYWl0JTIwc3R1ZGlvJTIwaGVhZHNob3R8ZW58MXx8fHwxNzYzOTY1Njg0fDA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Arif Nur Rohman"
+                alt="Arif Nur Rohman - Frontend Engineer professional portrait"
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100"
                 width={400}
                 height={500}
+                priority
               />
 
               {/* Corner accents */}

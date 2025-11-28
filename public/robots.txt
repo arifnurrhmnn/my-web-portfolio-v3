@@ -1,8 +1,23 @@
 User-agent: *
 Allow: /
 
-# Host
-Host: https://arifnurrohman.dev
+# Host  
+Host: https://arifnurrohman.com
 
 # Sitemaps
-Sitemap: https://arifnurrohman.dev/sitemap.xml
+Sitemap: https://arifnurrohman.com/sitemap.xml
+
+# Specific crawl guidance for better indexing
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot  
+Allow: /
+Crawl-delay: 1
+
+# Allow all search engines to access images and assets
+User-agent: *
+Allow: /images/
+Allow: /icons/
+Allow: /_next/static/

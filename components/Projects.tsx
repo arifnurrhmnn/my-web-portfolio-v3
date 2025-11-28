@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Github, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import { Button } from "./ui/button";
