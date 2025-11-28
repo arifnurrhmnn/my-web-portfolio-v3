@@ -2078,14 +2078,6 @@
       var(--tw-drop-shadow, drop-shadow(0 0 #0000)) !important;
   }
 
-  .blur-heavy {
-    filter: blur(100px) !important;
-  }
-
-  .backdrop-blur-heavy {
-    backdrop-filter: blur(100px) !important;
-  }
-
   .backdrop-blur-md {
     backdrop-filter: blur(12px);
   }
@@ -3317,9 +3309,4 @@ html {
   50% {
     opacity: 0.5;
   }
-}
-
-/* Custom blur utility */
-.blur-100 {
-  filter: blur(100px);
 }

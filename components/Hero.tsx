@@ -136,7 +136,7 @@ export function Hero() {
           className="relative hidden lg:block h-[600px]"
         >
           {/* Decorative Blobs */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-500/20 rounded-full blur-100" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-500/20 rounded-full blur-[100px]" />
 
           {/* Main Code Editor Window */}
           <div className="absolute top-10 left-10 right-10 bg-[#0f1117] rounded-xl border border-zinc-800 shadow-2xl overflow-hidden backdrop-blur-sm">
