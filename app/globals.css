@@ -2071,11 +2071,7 @@
   }
 
   .blur-\[100px\] {
-    --tw-blur: blur(100px) !important;
-    filter: var(--tw-blur) var(--tw-brightness, 1) var(--tw-contrast, 1)
-      var(--tw-grayscale, 0) var(--tw-hue-rotate, 0deg) var(--tw-invert, 0)
-      var(--tw-saturate, 1) var(--tw-sepia, 0)
-      var(--tw-drop-shadow, drop-shadow(0 0 #0000)) !important;
+    filter: blur(100px);
   }
 
   .backdrop-blur-md {

@@ -173,7 +173,7 @@ export function Hero() {
                     <span className="text-yellow-100">motion</span> {"}"}{" "}
                     <span className="text-purple-400">from</span>{" "}
                     <span className="text-green-400">
-                      &apos;motion/react&apos;
+                      &apos;framer-motion&apos;
                     </span>
                     ;
                   </>
