@@ -335,15 +335,15 @@ export function Hero() {
           >
             <div className="w-8 h-8 relative bg-blue-500/20">
               <Image
-                src="https://cdn.simpleicons.org/react/61DAFB"
+                src="https://cdn.simpleicons.org/nextdotjs/white"
                 className="object-contain"
-                alt="React"
+                alt="Next.js"
                 fill
                 sizes="32px"
                 unoptimized
                 priority
-                onLoad={() => console.log("React icon loaded")}
-                onError={(e) => console.log("React icon error:", e)}
+                onLoad={() => console.log("Next.js icon loaded")}
+                onError={(e) => console.log("Next.js icon error:", e)}
               />
             </div>
           </motion.div>

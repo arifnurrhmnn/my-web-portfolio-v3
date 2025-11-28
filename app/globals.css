@@ -2086,6 +2086,10 @@
     backdrop-filter: blur(100px) !important;
   }
 
+  .backdrop-blur-md {
+    backdrop-filter: blur(12px);
+  }
+
   .grayscale {
     --tw-grayscale: grayscale(100%) !important;
     filter: grayscale(100%) !important;

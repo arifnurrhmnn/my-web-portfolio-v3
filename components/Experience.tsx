@@ -2,12 +2,7 @@
 
 import React from "react";
 import { motion } from "motion/react";
-import {
-  Briefcase,
-  Building2,
-  ArrowUpRight,
-  CheckCircle2,
-} from "lucide-react";
+import { Briefcase, Building2, ArrowUpRight, CheckCircle2 } from "lucide-react";
 
 export function Experience() {
   return (
@@ -57,9 +52,9 @@ export function Experience() {
 
                 <p className="text-zinc-300 leading-relaxed mb-6">
                   Developing and maintaining the core learning management system
-                  (LMS) for one of Indonesia&apos;s leading EdTech platforms. Focused
-                  on scalability, performance, and delivering a seamless user
-                  experience for thousands of students.
+                  (LMS) for one of Indonesia&apos;s leading EdTech platforms.
+                  Focused on scalability, performance, and delivering a seamless
+                  user experience for thousands of students.
                 </p>
 
                 {/* Key Achievements */}
