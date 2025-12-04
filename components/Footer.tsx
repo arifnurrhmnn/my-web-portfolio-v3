@@ -20,9 +20,10 @@ export function Footer() {
             </p>
             <a
               href="mailto:arifnur.rhmnn@gmail.com"
+              aria-label="Send email to Arif Nur Rohman"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-emerald-600 hover:bg-emerald-700 rounded-full transition-all shadow-lg shadow-emerald-500/20 border border-emerald-500/50 hover:shadow-emerald-500/40"
             >
-              <Mail className="mr-2 h-5 w-5" />
+              <Mail className="mr-2 h-5 w-5" aria-hidden="true" />
               Say Hello
             </a>
           </div>
@@ -32,25 +33,28 @@ export function Footer() {
               href="https://github.com/arifnurrhmnn"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Visit Arif Nur Rohman's GitHub profile"
               className="p-3 bg-white/5 rounded-xl border border-white/10 text-zinc-500 transition-all hover:bg-white/10 hover:scale-110 hover:text-white"
             >
-              <Github className="h-6 w-6" />
+              <Github className="h-6 w-6" aria-hidden="true" />
             </a>
             <a
               href="https://www.linkedin.com/in/arifnurrohman"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Visit Arif Nur Rohman's LinkedIn profile"
               className="p-3 bg-white/5 rounded-xl border border-white/10 text-zinc-500 transition-all hover:bg-white/10 hover:scale-110 hover:text-blue-400"
             >
-              <Linkedin className="h-6 w-6" />
+              <Linkedin className="h-6 w-6" aria-hidden="true" />
             </a>
             <a
               href="https://www.instagram.com/arif_pride"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Visit Arif Nur Rohman's Instagram profile"
               className="p-3 bg-white/5 rounded-xl border border-white/10 text-zinc-500 transition-all hover:bg-white/10 hover:scale-110 hover:text-pink-500"
             >
-              <Instagram className="h-6 w-6" />
+              <Instagram className="h-6 w-6" aria-hidden="true" />
             </a>
           </div>
         </div>

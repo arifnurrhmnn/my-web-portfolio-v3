@@ -50,7 +50,7 @@ export function Hero() {
       />
 
       {/* Grid Pattern */}
-      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:30px_30px] [mask-image:linear-gradient(to_bottom,transparent,black,transparent)]" />
+      <div className="absolute inset-0 bg-grid-white/[0.02] bg-size-[30px_30px] mask-[linear-gradient(to_bottom,transparent,black,transparent)]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid lg:grid-cols-2 gap-12 items-center relative z-10">
         {/* Left Column: Text Content */}
@@ -69,14 +69,16 @@ export function Hero() {
             </div>
 
             <div className="space-y-2 mb-6">
-              <h2 className="text-xl md:text-2xl text-emerald-400 font-mono font-medium">
-                Hi, I&apos;m{" "}
-                <span className="text-white font-bold">Arif Nur Rohman</span>
-              </h2>
-              <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight leading-[1.1]">
-                Frontend{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500">
-                  Engineer.
+              <h1 className="space-y-2">
+                <span className="block text-xl md:text-2xl text-emerald-400 font-mono font-medium">
+                  Hi, I&apos;m{" "}
+                  <span className="text-white font-bold">Arif Nur Rohman </span>
+                </span>
+                <span className="block text-4xl md:text-6xl font-bold text-white tracking-tight leading-[1.1]">
+                  Frontend{" "}
+                  <span className="text-transparent bg-clip-text bg-linear-to-r from-emerald-400 to-cyan-500">
+                    Engineer.
+                  </span>
                 </span>
               </h1>
             </div>
@@ -102,6 +104,7 @@ export function Hero() {
             <div className="flex flex-wrap gap-3 md:gap-4">
               <Button
                 size="lg"
+                aria-label="Scroll to projects section"
                 className="h-12 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg px-8 text-base group shadow-lg shadow-emerald-500/20"
                 onClick={() => {
                   const projectsSection = document.getElementById("projects");
@@ -109,17 +112,21 @@ export function Hero() {
                 }}
               >
                 View Projects{" "}
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight
+                  className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"
+                  aria-hidden="true"
+                />
               </Button>
               <Button
                 variant="outline"
                 size="lg"
+                aria-label="Send email to contact"
                 className="h-12 border-white/10 bg-white/5 backdrop-blur-md text-zinc-300 hover:text-white hover:bg-white/10 rounded-lg px-8 text-base"
                 onClick={() => {
                   window.location.href = "mailto:arifnur.rhmnn@gmail.com";
                 }}
               >
-                <Mail className="mr-2 w-4 h-4" /> Contact Me
+                <Mail className="mr-2 w-4 h-4" aria-hidden="true" /> Contact Me
               </Button>
             </div>
 
@@ -128,17 +135,19 @@ export function Hero() {
                 href="https://github.com/arifnurrhmnn"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit GitHub profile"
                 className="text-zinc-500 hover:text-emerald-500 transition-colors"
               >
-                <Github size={24} />
+                <Github size={24} aria-hidden="true" />
               </a>
               <a
                 href="https://www.linkedin.com/in/arifnurrohman"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit LinkedIn profile"
                 className="text-zinc-500 hover:text-blue-500 transition-colors"
               >
-                <Linkedin size={24} />
+                <Linkedin size={24} aria-hidden="true" />
               </a>
             </div>
           </motion.div>

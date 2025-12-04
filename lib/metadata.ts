@@ -93,7 +93,7 @@ export const defaultMetadata = getStaticMetadata({
     template: "%s | Arif Nur Rohman - Frontend Engineer",
   },
   description:
-    "Frontend Engineer with 3+ years experience specializing in React.js, Next.js, and modern web development. Based in Indonesia, delivering high-performance web applications with excellent user experience.",
+    "Experienced Frontend Engineer specializing in React.js, Next.js, TypeScript & modern web development. 3+ years building high-performance, SEO-optimized web applications. Expertise in responsive design, API integration & UI/UX implementation.",
   keywords: [
     "Arif Nur Rohman",
     "Frontend Engineer",

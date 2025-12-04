@@ -114,9 +114,11 @@ export function About() {
             <div className="pt-6">
               <Button
                 size="lg"
+                aria-label="Download Arif Nur Rohman's resume PDF"
                 className="bg-emerald-600 hover:bg-emerald-700 text-white rounded-full px-8 py-6 text-base shadow-lg shadow-emerald-500/20 border border-emerald-400/20"
               >
-                <Download className="mr-2 h-5 w-5" /> Download Resume
+                <Download className="mr-2 h-5 w-5" aria-hidden="true" />{" "}
+                Download Resume
               </Button>
             </div>
           </motion.div>

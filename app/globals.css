@@ -1,6 +1,24 @@
 /* Tailwind CSS v4 */
 @import "tailwindcss";
 
+/* Keyframe animations */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 60s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
 /* Custom Theme */
 @theme {
   /* Custom animations */

@@ -1,12 +1,74 @@
-import { About } from "@/components/About";
-import { Certificates } from "@/components/Certificates";
-import { Experience } from "@/components/Experience";
-import { Footer } from "@/components/Footer";
+import dynamic from "next/dynamic";
 import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
-import { Projects } from "@/components/Projects";
-import { Services } from "@/components/Services";
-import { TechStack } from "@/components/TechStack";
+
+// Lazy load components below the fold for better FCP and LCP
+const TechStack = dynamic(
+  () =>
+    import("@/components/TechStack").then((mod) => ({
+      default: mod.TechStack,
+    })),
+  {
+    loading: () => <div className="h-20 bg-transparent" />,
+    ssr: true,
+  }
+);
+
+const About = dynamic(
+  () => import("@/components/About").then((mod) => ({ default: mod.About })),
+  {
+    loading: () => <div className="min-h-screen bg-transparent" />,
+    ssr: true,
+  }
+);
+
+const Services = dynamic(
+  () =>
+    import("@/components/Services").then((mod) => ({ default: mod.Services })),
+  {
+    loading: () => <div className="py-20 bg-transparent" />,
+    ssr: true,
+  }
+);
+
+const Experience = dynamic(
+  () =>
+    import("@/components/Experience").then((mod) => ({
+      default: mod.Experience,
+    })),
+  {
+    loading: () => <div className="py-20 bg-transparent" />,
+    ssr: true,
+  }
+);
+
+const Certificates = dynamic(
+  () =>
+    import("@/components/Certificates").then((mod) => ({
+      default: mod.Certificates,
+    })),
+  {
+    loading: () => <div className="py-20 bg-transparent" />,
+    ssr: true,
+  }
+);
+
+const Projects = dynamic(
+  () =>
+    import("@/components/Projects").then((mod) => ({ default: mod.Projects })),
+  {
+    loading: () => <div className="py-20 bg-transparent" />,
+    ssr: true,
+  }
+);
+
+const Footer = dynamic(
+  () => import("@/components/Footer").then((mod) => ({ default: mod.Footer })),
+  {
+    loading: () => <div className="py-12 bg-transparent" />,
+    ssr: true,
+  }
+);
 
 export default function Home() {
   return (

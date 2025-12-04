@@ -132,7 +132,7 @@ export function Certificates() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ delay: index * 0.05 }}
-                className="group relative bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 p-6 hover:border-emerald-500/30 transition-all duration-300 hover:-translate-y-1 hover:bg-white/10 flex flex-col justify-between min-h-[320px]"
+                className="group relative bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 p-6 hover:border-emerald-500/30 transition-all duration-300 hover:-translate-y-1 hover:bg-white/10 flex flex-col justify-between min-h-80"
               >
                 {/* Date Badge */}
                 <span className="absolute top-4 right-4 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full transition-colors group-hover:bg-emerald-500/20 backdrop-blur-sm text-xs font-medium text-emerald-400">
@@ -160,6 +160,7 @@ export function Certificates() {
                     href={cert.credential}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`View ${cert.subtitle} certificate from ${cert.title}`}
                     className="inline-flex items-center text-emerald-400 hover:text-emerald-300 text-sm font-medium transition-colors mt-4"
                   >
                     View Certificate
@@ -181,6 +182,12 @@ export function Certificates() {
               onClick={handleToggleView}
               variant="outline"
               size="lg"
+              aria-label={
+                isExpanded
+                  ? "Show less certificates, collapse the list"
+                  : "View all certificates, expand the list"
+              }
+              aria-expanded={isExpanded}
               className="border-white/10 bg-white/5 backdrop-blur-md text-zinc-300 hover:text-white hover:bg-white/10 rounded-full px-8"
             >
               {isExpanded ? "Show Less Certificates" : "View All Certificates"}

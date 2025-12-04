@@ -133,9 +133,10 @@ export function Projects() {
                           href={project.linkGithub}
                           target="_blank"
                           rel="noopener noreferrer"
+                          aria-label={`View ${project.name} source code on GitHub`}
                           className="p-2 bg-white/10 text-white rounded-full hover:bg-emerald-500 transition-colors border border-white/10 hover:border-emerald-500 backdrop-blur-md"
                         >
-                          <Github size={18} />
+                          <Github size={18} aria-hidden="true" />
                         </a>
                       )}
                       {project.linkSite && (
@@ -143,9 +144,10 @@ export function Projects() {
                           href={project.linkSite}
                           target="_blank"
                           rel="noopener noreferrer"
+                          aria-label={`Visit ${project.name} live website`}
                           className="p-2 bg-white/10 text-white rounded-full hover:bg-emerald-500 transition-colors border border-white/10 hover:border-emerald-500 backdrop-blur-md"
                         >
-                          <ExternalLink size={18} />
+                          <ExternalLink size={18} aria-hidden="true" />
                         </a>
                       )}
                     </div>

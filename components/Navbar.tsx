@@ -39,6 +39,7 @@ export function Navbar() {
           <div className="flex-shrink-0">
             <a
               href="#"
+              aria-label="Go to homepage"
               className="text-2xl font-bold text-white relative group"
             >
               Arif<span className="text-emerald-500">.</span>
@@ -53,6 +54,7 @@ export function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
+                  aria-label={`Navigate to ${link.name} section`}
                   className="text-zinc-300 hover:text-emerald-400 transition-colors px-3 py-2 text-sm font-medium relative group"
                 >
                   {link.name}
@@ -61,6 +63,7 @@ export function Navbar() {
               ))}
               <Button
                 variant="default"
+                aria-label="Send email to contact"
                 className="bg-emerald-600/90 hover:bg-emerald-600 text-white rounded-full shadow-lg shadow-emerald-500/20 backdrop-blur-sm border border-emerald-500/50"
                 onClick={() => {
                   window.location.href = "mailto:arifnur.rhmnn@gmail.com";
@@ -75,9 +78,17 @@ export function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
+              aria-label={
+                isOpen ? "Close navigation menu" : "Open navigation menu"
+              }
+              aria-expanded={isOpen}
               className="text-zinc-300 hover:text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              {isOpen ? (
+                <X size={24} aria-hidden="true" />
+              ) : (
+                <Menu size={24} aria-hidden="true" />
+              )}
             </button>
           </div>
         </div>
@@ -97,6 +108,7 @@ export function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
+                  aria-label={`Navigate to ${link.name} section`}
                   className="block px-4 py-3 rounded-xl text-base font-medium text-zinc-300 hover:text-white hover:bg-white/10 transition-all"
                   onClick={() => setIsOpen(false)}
                 >
@@ -105,6 +117,7 @@ export function Navbar() {
               ))}
               <Button
                 variant="default"
+                aria-label="Send email to contact"
                 className="w-full mt-4 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl h-12"
                 onClick={() => {
                   window.location.href = "mailto:arifnur.rhmnn@gmail.com";
