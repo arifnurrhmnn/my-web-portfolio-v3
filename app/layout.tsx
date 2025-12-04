@@ -27,15 +27,26 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
-        {/* Preconnect hints for critical external origins */}
-        <link rel="preconnect" href="https://cdn.simpleicons.org" />
-        <link rel="preconnect" href="https://images.unsplash.com" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        {/* Critical Resource Hints for Performance */}
+        {/* Preconnect to critical origins - establishes early connections */}
+        <link
+          rel="preconnect"
+          href="https://cdn.simpleicons.org"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://images.unsplash.com"
+          crossOrigin="anonymous"
+        />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
+
+        {/* DNS Prefetch for Google services - faster DNS resolution */}
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
         <script
           type="application/ld+json"

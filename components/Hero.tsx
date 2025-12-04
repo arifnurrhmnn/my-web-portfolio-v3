@@ -364,6 +364,7 @@ export function Hero() {
                 width={32}
                 height={32}
                 className="w-full h-full object-contain"
+                priority
                 unoptimized
               />
             </div>
@@ -386,6 +387,7 @@ export function Hero() {
                 width={32}
                 height={32}
                 className="w-full h-full object-contain"
+                priority
                 unoptimized
               />
             </div>
@@ -408,6 +410,7 @@ export function Hero() {
                 width={32}
                 height={32}
                 className="w-full h-full object-contain"
+                priority
                 unoptimized
               />
             </div>
