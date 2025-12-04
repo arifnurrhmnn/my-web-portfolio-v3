@@ -81,7 +81,7 @@ export function Hero() {
               </h1>
             </div>
 
-            <p className="text-zinc-400 text-lg leading-relaxed max-w-2xl">
+            <p className="text-zinc-400 text-base md:text-lg leading-relaxed max-w-2xl">
               I am a Frontend Engineer from Indonesia with over 3 years of
               experience in the field. Since 2022, I have been working at
               Arkademi as a Frontend Engineer, and since 2023, I have been
@@ -99,10 +99,10 @@ export function Hero() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="flex flex-col gap-6"
           >
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3 md:gap-4">
               <Button
                 size="lg"
-                className="h-12 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg px-8 text-base group shadow-lg shadow-emerald-500/20"
+                className="h-12 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg px-8 text-sm md:text-base group shadow-lg shadow-emerald-500/20"
                 onClick={() => {
                   const projectsSection = document.getElementById("projects");
                   projectsSection?.scrollIntoView({ behavior: "smooth" });
@@ -114,7 +114,7 @@ export function Hero() {
               <Button
                 variant="outline"
                 size="lg"
-                className="h-12 border-white/10 bg-white/5 backdrop-blur-md text-zinc-300 hover:text-white hover:bg-white/10 rounded-lg px-8 text-base"
+                className="h-12 border-white/10 bg-white/5 backdrop-blur-md text-zinc-300 hover:text-white hover:bg-white/10 rounded-lg px-8 text-sm md:text-base"
                 onClick={() => {
                   window.location.href = "mailto:arifnur.rhmnn@gmail.com";
                 }}
