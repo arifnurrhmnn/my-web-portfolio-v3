@@ -40,7 +40,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-[110vh] flex items-center pt-20 overflow-hidden selection:bg-emerald-500/30">
+    <section className="relative min-h-screen flex items-center py-20 overflow-hidden selection:bg-emerald-500/30">
       {/* Dynamic Spotlight Background */}
       <div
         className="pointer-events-none fixed inset-0 z-0 transition-opacity duration-300"

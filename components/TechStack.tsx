@@ -85,19 +85,19 @@ export function TechStack() {
             (tech, index) => (
               <div
                 key={index}
-                className="flex items-center gap-2 md:gap-3 text-zinc-500 hover:text-white cursor-pointer transition-all duration-300 group"
+                className="flex items-center gap-3 md:gap-4 text-zinc-500 hover:text-white cursor-pointer transition-all duration-300 group"
               >
-                <div className="relative w-6 h-6 md:w-8 md:h-8 grayscale group-hover:grayscale-0 transition-all duration-300">
+                <div className="relative w-8 h-8 md:w-10 md:h-10 grayscale group-hover:grayscale-0 transition-all duration-300">
                   <Image
                     src={tech.icon}
                     alt={tech.name}
-                    width={32}
-                    height={32}
+                    width={40}
+                    height={40}
                     className="w-full h-full object-contain"
                     unoptimized
                   />
                 </div>
-                <span className="text-base md:text-xl font-semibold">
+                <span className="text-lg md:text-2xl font-semibold">
                   {tech.name}
                 </span>
               </div>

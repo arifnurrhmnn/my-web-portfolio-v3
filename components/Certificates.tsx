@@ -135,11 +135,9 @@ export function Certificates() {
                 className="group relative bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 p-6 hover:border-emerald-500/30 transition-all duration-300 hover:-translate-y-1 hover:bg-white/10 flex flex-col justify-between min-h-[320px]"
               >
                 {/* Date Badge */}
-                <div className="absolute top-4 right-4 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full transition-colors group-hover:bg-emerald-500/20 backdrop-blur-sm">
-                  <span className="text-xs font-medium text-emerald-400">
-                    {cert.date}
-                  </span>
-                </div>
+                <span className="absolute top-4 right-4 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full transition-colors group-hover:bg-emerald-500/20 backdrop-blur-sm text-xs font-medium text-emerald-400">
+                  {cert.date}
+                </span>
 
                 <div className="mb-4 pt-2">
                   <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-4 group-hover:bg-emerald-500/20 group-hover:border-emerald-500/30 transition-all">
