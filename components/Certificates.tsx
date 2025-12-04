@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Award, ChevronDown, ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
 
@@ -91,15 +91,28 @@ const certifications = [
 ];
 
 export function Certificates() {
-  const [showAllCertificates, setShowAllCertificates] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(6);
+  const isExpanded = visibleCount >= certifications.length;
 
-  const displayedCertifications = showAllCertificates
-    ? certifications
-    : certifications.slice(0, 6);
+  const handleToggleView = () => {
+    if (isExpanded) {
+      setVisibleCount(6);
+      document
+        .getElementById("certificates")
+        ?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      setVisibleCount(certifications.length);
+    }
+  };
+
+  const displayedCertifications = certifications.slice(0, visibleCount);
 
   return (
-    <section className="py-20 bg-zinc-900 border-t border-zinc-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      id="certificates"
+      className="py-20 border-t border-white/5 relative bg-transparent"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Professional Certificates
@@ -111,71 +124,71 @@ export function Certificates() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {displayedCertifications.map((cert, index) => (
-            <motion.div
-              key={cert.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
-              className="group relative bg-zinc-950 rounded-xl border border-zinc-800 p-6 hover:border-emerald-500/50 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between min-h-[320px]"
-            >
-              {/* Date Badge */}
-              <div className="absolute top-4 right-4 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full">
-                <span className="text-xs font-medium text-emerald-400">
-                  {cert.date}
-                </span>
-              </div>
-
-              <div className="mb-4 pt-2">
-                <div className="w-10 h-10 rounded-lg bg-zinc-900 flex items-center justify-center mb-4 group-hover:bg-emerald-500/20 transition-colors">
-                  <Award className="w-5 h-5 text-emerald-500" />
+          <AnimatePresence>
+            {displayedCertifications.map((cert, index) => (
+              <motion.div
+                key={cert.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ delay: index * 0.05 }}
+                className="group relative bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 p-6 hover:border-emerald-500/30 transition-all duration-300 hover:-translate-y-1 hover:bg-white/10 flex flex-col justify-between min-h-[320px]"
+              >
+                {/* Date Badge */}
+                <div className="absolute top-4 right-4 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full transition-colors group-hover:bg-emerald-500/20 backdrop-blur-sm">
+                  <span className="text-xs font-medium text-emerald-400">
+                    {cert.date}
+                  </span>
                 </div>
-                <h3 className="text-lg font-bold text-white mb-1 group-hover:text-emerald-400 transition-colors">
-                  {cert.subtitle}
-                </h3>
-                <p className="text-xs font-semibold tracking-wide text-zinc-500 uppercase">
-                  {cert.title}
-                </p>
-              </div>
 
-              <div>
-                <div className="h-px w-full bg-zinc-900 mb-4" />
-                <p className="text-zinc-400 text-sm leading-relaxed mb-4">
-                  {cert.description}
-                </p>
-                <a
-                  href={cert.credential}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-emerald-400 hover:text-emerald-300 text-sm font-medium transition-colors"
-                >
-                  View Certificate
-                  <ExternalLink
-                    className="w-3 h-3"
-                    style={{ marginLeft: "4px" }}
-                  />
-                </a>
-              </div>
-            </motion.div>
-          ))}
+                <div className="mb-4 pt-2">
+                  <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-4 group-hover:bg-emerald-500/20 group-hover:border-emerald-500/30 transition-all">
+                    <Award className="w-5 h-5 text-emerald-500" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-1 group-hover:text-emerald-400 transition-colors line-clamp-2 h-14">
+                    {cert.subtitle}
+                  </h3>
+                  <p className="text-xs font-semibold tracking-wide text-zinc-500 uppercase group-hover:text-zinc-400 transition-colors">
+                    {cert.title}
+                  </p>
+                </div>
+
+                <div>
+                  <div className="h-px w-full bg-white/10 mb-4 group-hover:bg-emerald-500/20 transition-colors" />
+                  <p className="text-zinc-400 text-sm leading-relaxed line-clamp-2">
+                    {cert.description}
+                  </p>
+                  <a
+                    href={cert.credential}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-emerald-400 hover:text-emerald-300 text-sm font-medium transition-colors mt-4"
+                  >
+                    View Certificate
+                    <ExternalLink
+                      className="w-3 h-3"
+                      style={{ marginLeft: "4px" }}
+                    />
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </div>
 
         {/* View All Certificates Button */}
         {certifications.length > 6 && (
           <div className="mt-12 flex justify-center">
             <Button
-              onClick={() => setShowAllCertificates(!showAllCertificates)}
+              onClick={handleToggleView}
               variant="outline"
               size="lg"
-              className="border-zinc-700 bg-zinc-950 text-zinc-300 hover:text-white hover:bg-zinc-800 rounded-full px-8"
+              className="border-white/10 bg-white/5 backdrop-blur-md text-zinc-300 hover:text-white hover:bg-white/10 rounded-full px-8"
             >
-              {showAllCertificates
-                ? "Show Less Certificates"
-                : "View All Certificates"}
+              {isExpanded ? "Show Less Certificates" : "View All Certificates"}
               <ChevronDown
                 className={`ml-2 w-4 h-4 transition-transform duration-300 ${
-                  showAllCertificates ? "rotate-180" : ""
+                  isExpanded ? "rotate-180" : ""
                 }`}
               />
             </Button>

@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import Image from "next/image";
 
 const technologies = [
   {
@@ -65,64 +68,51 @@ const technologies = [
 
 export function TechStack() {
   return (
-    <section className="py-12 bg-zinc-950 border-y border-zinc-900 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 mb-8">
-        <p className="text-center text-zinc-500 text-sm uppercase tracking-wider">
+    <section className="py-12 border-y border-white/5 overflow-hidden relative bg-transparent">
+      {/* Glass Background */}
+      <div className="absolute inset-0 bg-white/5 backdrop-blur-sm" />
+
+      <div className="max-w-7xl mx-auto px-4 mb-8 relative z-10">
+        <p className="text-center text-zinc-500 text-sm uppercase tracking-wider font-medium">
           SKILLS & TECHNOLOGIES
         </p>
       </div>
 
-      <div className="relative flex overflow-x-hidden group">
-        <div className="flex animate-marquee whitespace-nowrap gap-12 items-center">
-          {/* First Copy */}
-          {technologies.map((tech, index) => (
-            <div
-              key={index}
-              className="flex items-center gap-3 text-zinc-400 grayscale hover:grayscale-0 transition-all duration-300 hover:text-white cursor-pointer"
-            >
-              <img src={tech.icon} alt={tech.name} className="w-8 h-8" />
-              <span className="text-xl font-semibold hidden md:block">
-                {tech.name}
-              </span>
-            </div>
-          ))}
-
-          {/* Second Copy for infinite loop */}
-          {technologies.map((tech, index) => (
-            <div
-              key={`dup-${index}`}
-              className="flex items-center gap-3 text-zinc-400 grayscale hover:grayscale-0 transition-all duration-300 hover:text-white cursor-pointer"
-            >
-              <img src={tech.icon} alt={tech.name} className="w-8 h-8" />
-              <span className="text-xl font-semibold hidden md:block">
-                {tech.name}
-              </span>
-            </div>
-          ))}
-
-          {/* Third Copy for smooth loop on huge screens */}
-          {technologies.map((tech, index) => (
-            <div
-              key={`dup-2-${index}`}
-              className="flex items-center gap-3 text-zinc-400 grayscale hover:grayscale-0 transition-all duration-300 hover:text-white cursor-pointer"
-            >
-              <img src={tech.icon} alt={tech.name} className="w-8 h-8" />
-              <span className="text-xl font-semibold hidden md:block">
-                {tech.name}
-              </span>
-            </div>
-          ))}
+      <div className="relative z-10 flex overflow-x-hidden">
+        <div className="flex animate-marquee whitespace-nowrap gap-8 md:gap-12 items-center">
+          {/* Three copies for seamless loop */}
+          {[...technologies, ...technologies, ...technologies].map(
+            (tech, index) => (
+              <div
+                key={index}
+                className="flex items-center gap-2 md:gap-3 text-zinc-500 hover:text-white cursor-pointer transition-all duration-300 group"
+              >
+                <div className="relative w-6 h-6 md:w-8 md:h-8 grayscale group-hover:grayscale-0 transition-all duration-300">
+                  <Image
+                    src={tech.icon}
+                    alt={tech.name}
+                    width={32}
+                    height={32}
+                    className="w-full h-full object-contain"
+                    unoptimized
+                  />
+                </div>
+                <span className="text-base md:text-xl font-semibold">
+                  {tech.name}
+                </span>
+              </div>
+            )
+          )}
         </div>
       </div>
 
-      {/* CSS for marquee animation since Tailwind doesn't have it built-in by default without config */}
       <style>{`
         @keyframes marquee {
           0% { transform: translateX(0); }
           100% { transform: translateX(-100%); }
         }
         .animate-marquee {
-          animation: marquee 40s linear infinite;
+          animation: marquee 60s linear infinite;
         }
         .animate-marquee:hover {
           animation-play-state: paused;

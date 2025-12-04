@@ -45,8 +45,11 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-20 bg-zinc-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      id="services"
+      className="py-20 relative overflow-hidden bg-transparent"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             What I Do
@@ -57,7 +60,7 @@ export function Services() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -65,15 +68,15 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group p-8 bg-zinc-950 rounded-2xl border border-zinc-800 hover:border-emerald-500/50 transition-all duration-300 hover:-translate-y-1"
+              className="group p-8 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-md hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/30"
             >
-              <div className="w-12 h-12 bg-zinc-900 rounded-lg flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition-colors">
-                <service.icon className="w-6 h-6 text-emerald-500" />
+              <div className="w-14 h-14 bg-white/5 rounded-2xl border border-white/10 flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 group-hover:border-emerald-500/30 transition-all duration-300">
+                <service.icon className="w-7 h-7 text-emerald-500" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">
                 {service.title}
               </h3>
-              <p className="text-zinc-400 leading-relaxed">
+              <p className="text-zinc-400 leading-relaxed text-sm group-hover:text-zinc-300 transition-colors">
                 {service.description}
               </p>
             </motion.div>

@@ -6,13 +6,16 @@ import { Briefcase, Building2, ArrowUpRight, CheckCircle2 } from "lucide-react";
 
 export function Experience() {
   return (
-    <section id="experience" className="py-20 bg-zinc-950 relative">
+    <section
+      id="experience"
+      className="py-20 relative overflow-hidden bg-transparent"
+    >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
+        <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Professional Experience
           </h2>
-          <p className="text-zinc-400 max-w-2xl mx-auto">
+          <p className="text-zinc-400 max-w-2xl">
             My professional journey and technical expertise across various
             projects and collaborations.
           </p>
@@ -24,12 +27,12 @@ export function Experience() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-zinc-900/50 rounded-xl border border-zinc-800 p-8 md:p-10 hover:border-emerald-500/50 transition-all duration-500 group"
+            className="bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 p-8 md:p-10 hover:border-emerald-500/30 transition-all duration-500 group shadow-2xl"
           >
             <div className="flex flex-col md:flex-row gap-8 items-start">
               {/* Company Logo / Icon */}
-              <div className="w-16 h-16 rounded-xl bg-zinc-800 flex items-center justify-center border border-zinc-700 group-hover:scale-110 transition-all duration-300 shrink-0 transform-gpu">
-                <Building2 className="w-8 h-8 text-emerald-400 group-hover:text-emerald-300 transition-colors" />
+              <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:scale-105 transition-transform duration-500 shrink-0 shadow-inner">
+                <Building2 className="w-8 h-8 text-emerald-400" />
               </div>
 
               <div className="flex-1">
@@ -41,7 +44,7 @@ export function Experience() {
                     <p className="text-lg text-zinc-400">Arkademi</p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium">
+                    <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium backdrop-blur-sm">
                       Full-time
                     </span>
                     <span className="text-zinc-500 text-sm font-mono">
@@ -86,7 +89,7 @@ export function Experience() {
                   delivering high-quality web solutions.
                 </p>
 
-                <div className="mt-8 pt-6 border-t border-zinc-800 flex flex-wrap gap-2">
+                <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap gap-2">
                   {[
                     "React",
                     "Next.js",
@@ -100,7 +103,7 @@ export function Experience() {
                   ].map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-zinc-950 rounded-xl border border-zinc-800 text-xs text-zinc-400 font-mono"
+                      className="px-3 py-1 bg-white/5 rounded-lg border border-white/10 text-xs text-zinc-400 font-mono hover:bg-white/10 transition-colors"
                     >
                       {tech}
                     </span>
@@ -124,7 +127,7 @@ export function Experience() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="bg-zinc-900/30 rounded-2xl border border-zinc-800 p-6 hover:bg-zinc-900/50 transition-colors"
+                className="bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 p-6 hover:bg-white/10 transition-all shadow-lg hover:border-emerald-500/30"
               >
                 <div className="flex justify-between items-start mb-4">
                   <div>
@@ -148,7 +151,7 @@ export function Experience() {
                     (tag) => (
                       <span
                         key={tag}
-                        className="px-2 py-1 bg-zinc-800/50 text-zinc-500 rounded text-[10px] border border-zinc-800"
+                        className="px-2 py-1 bg-white/5 text-zinc-400 rounded text-[10px] border border-white/10"
                       >
                         {tag}
                       </span>
@@ -163,7 +166,7 @@ export function Experience() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="bg-zinc-900/30 rounded-2xl border border-zinc-800 p-6 hover:bg-zinc-900/50 transition-colors"
+                className="bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 p-6 hover:bg-white/10 transition-all shadow-lg hover:border-emerald-500/30"
               >
                 <div className="flex justify-between items-start mb-4">
                   <div>
@@ -184,7 +187,7 @@ export function Experience() {
                     (tag) => (
                       <span
                         key={tag}
-                        className="px-2 py-1 bg-zinc-800/50 text-zinc-500 rounded text-[10px] border border-zinc-800"
+                        className="px-2 py-1 bg-white/5 text-zinc-400 rounded text-[10px] border border-white/10"
                       >
                         {tag}
                       </span>

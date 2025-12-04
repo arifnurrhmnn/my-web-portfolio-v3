@@ -1,9 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
+import Image from "next/image";
 
 // Syntax highlighting simulation
 const CodeLine = ({
@@ -40,7 +40,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-[100vh] flex items-center bg-zinc-950 pt-16 overflow-hidden selection:bg-emerald-500/30">
+    <section className="relative min-h-[110vh] flex items-center pt-20 overflow-hidden selection:bg-emerald-500/30">
       {/* Dynamic Spotlight Background */}
       <div
         className="pointer-events-none fixed inset-0 z-0 transition-opacity duration-300"
@@ -60,7 +60,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-800/50 border border-zinc-700 text-zinc-300 text-xs font-mono mb-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-zinc-300 text-xs font-mono mb-8 backdrop-blur-md">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
@@ -102,7 +102,7 @@ export function Hero() {
             <div className="flex flex-wrap gap-4">
               <Button
                 size="lg"
-                className="h-12 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg px-8 text-base group"
+                className="h-12 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg px-8 text-base group shadow-lg shadow-emerald-500/20"
                 onClick={() => {
                   const projectsSection = document.getElementById("projects");
                   projectsSection?.scrollIntoView({ behavior: "smooth" });
@@ -114,7 +114,7 @@ export function Hero() {
               <Button
                 variant="outline"
                 size="lg"
-                className="h-12 border-zinc-800 bg-zinc-900/50 text-zinc-300 hover:text-white hover:bg-zinc-800 rounded-lg px-8 text-base"
+                className="h-12 border-white/10 bg-white/5 backdrop-blur-md text-zinc-300 hover:text-white hover:bg-white/10 rounded-lg px-8 text-base"
                 onClick={() => {
                   window.location.href = "mailto:arifnur.rhmnn@gmail.com";
                 }}
@@ -155,9 +155,9 @@ export function Hero() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-500/20 rounded-full blur-[100px]" />
 
           {/* Main Code Editor Window */}
-          <div className="absolute top-10 left-10 right-10 bg-[#0f1117] rounded-xl border border-zinc-800 shadow-2xl overflow-hidden backdrop-blur-sm">
+          <div className="absolute top-10 left-10 right-10 bg-[#0f1117]/90 rounded-xl border border-white/10 shadow-2xl overflow-hidden backdrop-blur-xl">
             {/* Window Header */}
-            <div className="flex items-center px-4 py-3 bg-zinc-900/50 border-b border-zinc-800">
+            <div className="flex items-center px-4 py-3 bg-white/5 border-b border-white/5">
               <div className="flex gap-2">
                 <div className="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50" />
                 <div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50" />
@@ -302,7 +302,7 @@ export function Hero() {
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -right-4 top-20 bg-zinc-900/90 backdrop-blur p-4 rounded-xl border border-zinc-800 shadow-xl flex items-center gap-4"
+            className="absolute -right-4 top-20 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10 shadow-xl flex items-center gap-4"
           >
             <div className="relative flex items-center justify-center w-12 h-12">
               <svg className="w-full h-full transform -rotate-90">
@@ -346,20 +346,16 @@ export function Hero() {
               ease: "easeInOut",
               delay: 1,
             }}
-            className="absolute -left-8 bottom-32 p-3 bg-zinc-800/80 backdrop-blur rounded-2xl border border-zinc-700 shadow-lg flex items-center justify-center"
-            style={{ minWidth: "56px", minHeight: "56px" }}
+            className="absolute -left-8 bottom-32 p-3 bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 shadow-lg"
           >
-            <div className="w-8 h-8 relative bg-blue-500/20">
+            <div className="relative w-8 h-8">
               <Image
                 src="https://cdn.simpleicons.org/nextdotjs/white"
-                className="object-contain"
-                alt="Next.js framework logo - modern React framework for web development"
-                fill
-                sizes="32px"
+                alt="Next.js"
+                width={32}
+                height={32}
+                className="w-full h-full object-contain"
                 unoptimized
-                priority
-                onLoad={() => console.log("Next.js icon loaded")}
-                onError={(e) => console.log("Next.js icon error:", e)}
               />
             </div>
           </motion.div>
@@ -372,17 +368,38 @@ export function Hero() {
               ease: "easeInOut",
               delay: 2,
             }}
-            className="absolute left-10 bottom-10 p-3 bg-zinc-800/80 backdrop-blur rounded-2xl border border-zinc-700 shadow-lg flex items-center justify-center"
+            className="absolute left-10 bottom-10 p-3 bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 shadow-lg"
           >
-            <div className="w-8 h-8 relative">
+            <div className="relative w-8 h-8">
               <Image
                 src="https://cdn.simpleicons.org/typescript/3178C6"
-                className="object-contain"
-                alt="TypeScript programming language logo - strongly typed JavaScript"
-                fill
-                sizes="32px"
+                alt="TypeScript"
+                width={32}
+                height={32}
+                className="w-full h-full object-contain"
                 unoptimized
-                priority
+              />
+            </div>
+          </motion.div>
+
+          <motion.div
+            animate={{ y: [0, 12, 0] }}
+            transition={{
+              duration: 7,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1.5,
+            }}
+            className="absolute -right-8 bottom-48 p-3 bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 shadow-lg"
+          >
+            <div className="relative w-8 h-8">
+              <Image
+                src="https://cdn.simpleicons.org/tailwindcss/06B6D4"
+                alt="Tailwind CSS"
+                width={32}
+                height={32}
+                className="w-full h-full object-contain"
+                unoptimized
               />
             </div>
           </motion.div>
@@ -392,7 +409,7 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 2.2 }}
-            className="absolute right-0 bottom-20 bg-zinc-900/90 backdrop-blur-md border border-emerald-500/30 p-4 rounded-xl shadow-2xl max-w-[200px]"
+            className="absolute right-0 bottom-20 bg-white/10 backdrop-blur-md border border-emerald-500/30 p-4 rounded-xl shadow-2xl max-w-[200px]"
           >
             <div className="flex items-center gap-2 mb-2">
               <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />

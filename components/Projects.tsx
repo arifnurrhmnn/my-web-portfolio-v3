@@ -86,7 +86,7 @@ export function Projects() {
   };
 
   return (
-    <section id="projects" className="py-20 bg-zinc-950">
+    <section id="projects" className="py-20 relative bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -111,18 +111,18 @@ export function Projects() {
                   duration: 0.3,
                   delay: index < 4 ? index * 0.1 : 0,
                 }}
-                className="group relative bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 hover:border-emerald-500/50 transition-all duration-500 h-[400px]"
+                className="group relative bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-emerald-500/50 transition-all duration-500 h-[400px] backdrop-blur-md shadow-none"
               >
                 {/* Image Container - Fixed Height */}
                 <div className="h-full w-full relative">
                   <Image
                     src={project.imageDisplay}
                     alt={project.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-60"
                     width={600}
                     height={400}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent opacity-90" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent opacity-100" />
 
                   {/* Content Overlay - Positioned absolutely to sit over the image */}
                   <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 flex flex-col h-full justify-end">
@@ -133,7 +133,7 @@ export function Projects() {
                           href={project.linkGithub}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-2 bg-zinc-800 text-white rounded-full hover:bg-emerald-600 transition-colors border border-zinc-700 hover:border-emerald-500"
+                          className="p-2 bg-white/10 text-white rounded-full hover:bg-emerald-500 transition-colors border border-white/10 hover:border-emerald-500 backdrop-blur-md"
                         >
                           <Github size={18} />
                         </a>
@@ -143,7 +143,7 @@ export function Projects() {
                           href={project.linkSite}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-2 bg-zinc-800 text-white rounded-full hover:bg-emerald-600 transition-colors border border-zinc-700 hover:border-emerald-500"
+                          className="p-2 bg-white/10 text-white rounded-full hover:bg-emerald-500 transition-colors border border-white/10 hover:border-emerald-500 backdrop-blur-md"
                         >
                           <ExternalLink size={18} />
                         </a>
@@ -166,7 +166,7 @@ export function Projects() {
                           {project.tags.map((tag) => (
                             <span
                               key={tag}
-                              className="px-2 py-1 bg-zinc-800/80 backdrop-blur text-xs text-zinc-300 rounded border border-zinc-700"
+                              className="px-2 py-1 bg-white/10 backdrop-blur-md text-xs text-zinc-200 rounded border border-white/10 shadow-sm"
                             >
                               {tag}
                             </span>
@@ -187,7 +187,7 @@ export function Projects() {
               onClick={handleToggleView}
               variant="outline"
               size="lg"
-              className="border-zinc-700 bg-zinc-900 text-zinc-300 hover:text-white hover:bg-zinc-800 rounded-full px-8"
+              className="border-white/10 bg-white/5 backdrop-blur-md text-zinc-300 hover:text-white hover:bg-white/10 rounded-full px-8"
             >
               {isExpanded ? "Show Less Projects" : "View All Projects"}
               <ChevronDown
