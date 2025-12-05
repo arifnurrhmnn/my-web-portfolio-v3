@@ -7,6 +7,15 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 
 export function About() {
+  const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    link.href = "/file/Arif Nur Rohman - Frontend Engineer - CV.pdf";
+    link.download = "Arif Nur Rohman - Frontend Engineer - CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section
       id="about"
@@ -22,14 +31,14 @@ export function About() {
             transition={{ duration: 0.6 }}
             className="w-full md:w-2/5 relative perspective-1000 group"
           >
-            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 z-20 transition-transform duration-500">
+            <div className="relative aspect-3/4 rounded-2xl overflow-hidden border border-white/10 z-20 transition-transform duration-500">
               <div className="absolute inset-0 bg-emerald-500/10 group-hover:bg-transparent transition-colors duration-500 z-10 mix-blend-overlay" />
 
               {/* Glass Overlay on Image */}
-              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent z-10" />
-              {/* Using a high quality professional portrait consistent with the theme */}
+              <div className="absolute inset-0 bg-linear-to-t from-zinc-950/80 via-transparent to-transparent z-10" />
+              {/* Professional portrait */}
               <Image
-                src="https://images.unsplash.com/photo-1625850902501-cc6baef3e3b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBhc2lhbiUyMGRldmVsb3BlciUyMHBvcnRyYWl0JTIwc3R1ZGlvJTIwaGVhZHNob3R8ZW58MXx8fHwxNzYzOTY1Njg0fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="/img/img-profile.webp"
                 alt="Arif Nur Rohman - Frontend Engineer professional portrait"
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100"
                 width={400}
@@ -114,6 +123,7 @@ export function About() {
             <div className="pt-6">
               <Button
                 size="lg"
+                onClick={handleDownloadCV}
                 aria-label="Download Arif Nur Rohman's resume PDF"
                 className="bg-emerald-600 hover:bg-emerald-700 text-white rounded-full px-8 py-6 text-base shadow-lg shadow-emerald-500/20 border border-emerald-400/20"
               >

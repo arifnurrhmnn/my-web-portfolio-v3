@@ -132,31 +132,31 @@ export function Experience() {
                 <div className="flex justify-between items-start mb-4">
                   <div>
                     <h4 className="text-lg font-bold text-white">
-                      Frontend Specialist
+                      Freelance Frontend Developer
                     </h4>
                     <p className="text-zinc-400 text-sm">
-                      Various Clients • 2019 - 2021
+                      TMS Isuzu Portfolio & Admin • 2023 - 2024
                     </p>
                   </div>
                   <ArrowUpRight className="w-5 h-5 text-zinc-600" />
                 </div>
                 <p className="text-zinc-400 text-sm mb-4 leading-relaxed">
-                  Delivered custom web solutions for small businesses and
-                  startups. Specialized in converting design mockups
-                  (Figma/Adobe XD) into pixel-perfect, responsive HTML/CSS/React
-                  code.
+                  Developed the portfolio website and admin dashboard using
+                  Next.js. Built page structures, components, and core frontend
+                  logic without a predefined UI design. Implemented data flow,
+                  connected frontend features with Next.js API Routes, and
+                  managed state using Redux to ensure stable and functional
+                  dashboard operations.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {["WordPress", "Custom Themes", "Shopify", "React"].map(
-                    (tag) => (
-                      <span
-                        key={tag}
-                        className="px-2 py-1 bg-white/5 text-zinc-400 rounded text-[10px] border border-white/10"
-                      >
-                        {tag}
-                      </span>
-                    )
-                  )}
+                  {["Next.js", "Styled-Components", "Redux"].map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2 py-1 bg-white/5 text-zinc-400 rounded text-[10px] border border-white/10"
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </motion.div>
 
@@ -171,28 +171,29 @@ export function Experience() {
                 <div className="flex justify-between items-start mb-4">
                   <div>
                     <h4 className="text-lg font-bold text-white">
-                      UI Implementation
+                      Freelance Frontend Developer
                     </h4>
-                    <p className="text-zinc-400 text-sm">Contract Work</p>
+                    <p className="text-zinc-400 text-sm">
+                      Kasandra Dashboard • 2024
+                    </p>
                   </div>
                   <ArrowUpRight className="w-5 h-5 text-zinc-600" />
                 </div>
                 <p className="text-zinc-400 text-sm mb-4 leading-relaxed">
-                  Collaborated with backend teams to implement complex
-                  dashboards and data visualization interfaces. Focused on
-                  reusable component libraries and state management.
+                  Converted Figma designs into responsive HTML and CSS layouts.
+                  Ensured pixel-accurate implementation, clean structure, and
+                  consistent UI behavior across devices. Delivered a front-end
+                  ready for integration by the client’s development team.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {["Dashboard UI", "Chart.js", "API Integration"].map(
-                    (tag) => (
-                      <span
-                        key={tag}
-                        className="px-2 py-1 bg-white/5 text-zinc-400 rounded text-[10px] border border-white/10"
-                      >
-                        {tag}
-                      </span>
-                    )
-                  )}
+                  {["HTML", "CSS", "JavaScript"].map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2 py-1 bg-white/5 text-zinc-400 rounded text-[10px] border border-white/10"
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </motion.div>
             </div>
