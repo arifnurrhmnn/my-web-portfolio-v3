@@ -39,34 +39,30 @@ export const getStaticMetadata = ({
         "max-snippet": -1,
       },
     },
-    verification: {
-      google: "your-google-verification-code",
-      yandex: "your-yandex-verification-code",
-    },
     icons: {
       icon: [
         { url: "/favicon.ico" },
         { url: "/icon.png", sizes: "48x48", type: "image/png" },
       ],
       shortcut: "/icon.png",
-      apple: "/apple-touch-icon.png",
+      apple: "/icon.png",
       other: {
         rel: "apple-touch-icon-precomposed",
-        url: "/apple-touch-icon.png",
+        url: "/icon.png",
       },
     },
     openGraph: {
       type: "website",
       locale: "en_US",
-      siteName: "Arif Nur Rohman Portfolio",
+      siteName: "Arif Nur Rohman",
       title: titleString,
       description: description,
       url: `${baseUrl}${canonical}`,
       images: [
         {
-          url: `${baseUrl}/og-image.jpg`,
-          width: 1200,
-          height: 630,
+          url: `${baseUrl}/img/img-profile.webp`,
+          width: 600,
+          height: 600,
           alt: titleString,
         },
       ],
@@ -75,10 +71,10 @@ export const getStaticMetadata = ({
       card: "summary_large_image",
       title: titleString,
       description: description,
-      creator: "@arifnurr",
+      creator: "",
       images: [
         {
-          url: `${baseUrl}/og-image.jpg`,
+          url: `${baseUrl}/img/img-profile.webp`,
           alt: titleString,
         },
       ],

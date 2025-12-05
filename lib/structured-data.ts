@@ -4,9 +4,9 @@ export const personSchema = {
   name: "Arif Nur Rohman",
   jobTitle: "Frontend Engineer",
   description:
-    "Frontend Engineer with 3+ years experience specializing in React.js, Next.js, and modern web development. Based in Indonesia, delivering high-performance web applications.",
+    "Experienced Frontend Engineer specializing in React.js, Next.js, TypeScript & modern web development. 3+ years building high-performance, SEO-optimized web applications. Expertise in responsive design, API integration & UI/UX implementation.",
   url: "https://arifnurrohman.com",
-  image: "https://arifnurrohman.com/profile-photo.jpg",
+  image: "https://arifnurrohman.com/img/img-profile.webp",
   email: "arifnr.arkademi@gmail.com",
   birthPlace: "Indonesia",
   nationality: "Indonesian",
@@ -35,21 +35,24 @@ export const personSchema = {
     "User Interface Design",
     "Search Engine Optimization",
     "Responsive Web Design",
+    "API Integration",
+    "Performance Optimization",
+    "UI/UX Implementation",
   ],
   sameAs: [
     "https://linkedin.com/in/arifnurrohman",
     "https://github.com/arifnurrhmnn",
-    "https://instagram.com/arifnurr",
+    "https://instagram.com/arif_pride",
   ],
 };
 
 export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Arif Nur Rohman Portfolio",
+  name: "Arif Nur Rohman",
   url: "https://arifnurrohman.com",
   description:
-    "Professional portfolio showcasing frontend engineering projects and experience",
+    "Experienced Frontend Engineer specializing in React.js, Next.js, TypeScript & modern web development. Professional portfolio showcasing 3+ years of high-performance web development projects and expertise.",
   author: {
     "@type": "Person",
     name: "Arif Nur Rohman",
@@ -62,7 +65,7 @@ export const organizationSchema = {
   "@type": "ProfessionalService",
   name: "Arif Nur Rohman - Frontend Engineering Services",
   description:
-    "Professional frontend development services specializing in React, Next.js, and modern web technologies",
+    "Professional frontend development services specializing in React.js, Next.js, TypeScript and modern web technologies. Building high-performance, SEO-optimized web applications with expertise in responsive design and API integration.",
   provider: {
     "@type": "Person",
     name: "Arif Nur Rohman",
@@ -70,9 +73,14 @@ export const organizationSchema = {
   areaServed: "Indonesia",
   serviceType: [
     "Frontend Development",
-    "React Development",
+    "React.js Development",
     "Next.js Development",
+    "TypeScript Development",
     "Web Application Development",
     "UI/UX Implementation",
+    "Responsive Web Design",
+    "API Integration",
+    "Performance Optimization",
+    "SEO Optimization",
   ],
 };
