@@ -8,6 +8,7 @@ import {
 } from "@/lib/structured-data";
 import { defaultMetadata } from "@/lib/metadata";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -53,6 +54,7 @@ export default function RootLayout({
       <body className="antialiased font-sans">
         {children}
         <GoogleAnalytics gaId="G-02K38F8L2Z" />
+        <Analytics />
       </body>
     </html>
   );
