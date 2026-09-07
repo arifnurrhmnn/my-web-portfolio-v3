@@ -22,96 +22,196 @@ export function Experience() {
         </div>
 
         <div className="space-y-12">
-          {/* 1. Main Full-time Role - Arkademi */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 p-8 md:p-10 hover:border-emerald-500/30 transition-all duration-500 group shadow-2xl"
-          >
-            <div className="flex flex-col md:flex-row gap-8 items-start">
-              {/* Company Logo / Icon */}
-              <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:scale-105 transition-transform duration-500 shrink-0 shadow-inner">
-                <Building2 className="w-8 h-8 text-emerald-400" />
-              </div>
-
-              <div className="flex-1">
-                <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors">
-                      Frontend Engineer
-                    </h3>
-                    <p className="text-lg text-zinc-400">Arkademi</p>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium backdrop-blur-sm">
-                      Full-time
-                    </span>
-                    <span className="text-zinc-500 text-sm font-mono">
-                      2021 - Present
-                    </span>
-                  </div>
+          {/* Full-time Role  */}
+          <div className="flex flex-col gap-6">
+            {/* 1. Full-time Role - Bank Danamon */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 p-8 md:p-10 hover:border-emerald-500/30 transition-all duration-500 group shadow-2xl"
+            >
+              <div className="flex flex-col md:flex-row gap-8 items-start">
+                {/* Company Logo / Icon */}
+                <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:scale-105 transition-transform duration-500 shrink-0 shadow-inner">
+                  <Building2 className="w-8 h-8 text-emerald-400" />
                 </div>
 
-                <p className="text-zinc-300 leading-relaxed mb-6">
-                  At Arkademi, I started by working on the migration of the
-                  company&apos;s website from WordPress to React.js, utilizing
-                  technologies such as React.js, JavaScript, Redux, Bootstrap,
-                  and SCSS. This involved collaborating closely with the backend
-                  team for API integration and working with the product team to
-                  plan and discuss upcoming features. As the migration
-                  progressed, we transitioned several websites to Next.js to
-                  enhance performance and scalability.
-                </p>
-
-                {/* Key Achievements */}
-                <div className="grid md:grid-cols-2 gap-4 mb-6">
-                  {[
-                    "Developing responsive websites and high-performance websites with a focus on SEO optimization",
-                    "Integrating with APIs and third-party libraries",
-                    "Migrating the website to React.js and later transitioning to Next.js to enhance performance, utilizing TypeScript for better code quality",
-                    "Contributing to the development of Arkademi's website in partnership with Kartu Prakerja, focusing on meeting the specific needs of the partner",
-                    "Developing an internal company website to assist with operational processes",
-                    "Managing tasks within my frontend team and collaborating with product and tech teams",
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-emerald-500 mt-0.5 shrink-0" />
-                      <span className="text-zinc-400 text-sm">{item}</span>
+                <div className="flex-1">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+                    <div>
+                      <h3 className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors">
+                        Web Specialist
+                      </h3>
+                      <p className="text-lg text-zinc-400">
+                        PT Bank Danamon Indonesia Tbk
+                      </p>
                     </div>
-                  ))}
-                </div>
+                    <div className="flex items-center gap-3">
+                      <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium backdrop-blur-sm">
+                        Full-time
+                      </span>
+                      <span className="text-zinc-500 text-sm font-mono">
+                        2026 - Present
+                      </span>
+                    </div>
+                  </div>
 
-                <p className="text-zinc-300 leading-relaxed mb-6">
-                  Throughout my time at Arkademi, I gained experience in
-                  responsive web design, debugging, problem-solving, team
-                  collaboration, project management, web performance
-                  optimization, and SEO, all of which have been crucial in
-                  delivering high-quality web solutions.
-                </p>
+                  <p className="text-zinc-300 leading-relaxed mb-6">
+                    At Bank Danamon, I work as a Web Specialist within the
+                    Digital Marketing team, managing and maintaining the
+                    corporate website through Sitecore CMS. My role involves
+                    handling content updates and developing responsive landing
+                    pages based on business and marketing requirements using
+                    HTML, CSS, JavaScript, and Bootstrap. I collaborate closely
+                    with the Marketing Communication team to support digital
+                    campaigns and initiatives across various Bank Danamon
+                    products, while ensuring that every page is responsive,
+                    well-optimized, and delivers a consistent user experience
+                    across different devices.
+                  </p>
 
-                <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap gap-2">
-                  {[
-                    "React",
-                    "Next.js",
-                    "TypeScript",
-                    "Redux Toolkit",
-                    "Zustand",
-                    "Tailwind CSS",
-                    "Bootstrap",
-                    "SCSS",
-                    "AI Integration",
-                  ].map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-white/5 rounded-lg border border-white/10 text-xs text-zinc-400 font-mono hover:bg-white/10 transition-colors"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                  {/* Key Achievements */}
+                  <div className="grid md:grid-cols-2 gap-4 mb-6">
+                    {[
+                      "Managing and maintaining website content through Sitecore CMS, including content updates, page creation, and publishing based on business and marketing requirements",
+                      "Developing responsive landing pages for marketing campaigns and product initiatives using HTML, CSS, JavaScript, and Bootstrap",
+                      "Ensuring website pages are responsive and provide a consistent experience across desktop, tablet, and mobile devices",
+                      "Implementing on-page SEO best practices by optimizing metadata, content structure, headings, internal links, and other page-level elements to improve content quality and search visibility",
+                      "Optimizing web content and assets to improve page loading performance while maintaining visual quality, functionality, and overall user experience",
+                      "Collaborating with the Marketing Communication team to translate campaign and product requirements into functional, responsive, and optimized web experiences",
+                    ].map((item, i) => (
+                      <div key={i} className="flex items-start gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-emerald-500 mt-0.5 shrink-0" />
+                        <span className="text-zinc-400 text-sm">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <p className="text-zinc-300 leading-relaxed mb-6">
+                    Through this role, I have gained hands-on experience in
+                    managing a large-scale corporate website within the banking
+                    industry, where content accuracy, responsiveness,
+                    performance, and consistency are essential. This experience
+                    has further strengthened my skills in CMS management,
+                    frontend development, SEO, web performance optimization,
+                    quality assurance, and cross-functional collaboration within
+                    a digital marketing environment.
+                  </p>
+
+                  <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap gap-2">
+                    {[
+                      "Sitecore",
+                      "HTML",
+                      "CSS",
+                      "JavaScript",
+                      "Bootstrap",
+                      "On-Page SEO",
+                      "Web Performance",
+                      "Web QA",
+                    ].map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 bg-white/5 rounded-lg border border-white/10 text-xs text-zinc-400 font-mono hover:bg-white/10 transition-colors"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+            {/* 2. Full-time Role - Arkademi */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 p-8 md:p-10 hover:border-emerald-500/30 transition-all duration-500 group shadow-2xl"
+            >
+              <div className="flex flex-col md:flex-row gap-8 items-start">
+                {/* Company Logo / Icon */}
+                <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:scale-105 transition-transform duration-500 shrink-0 shadow-inner">
+                  <Building2 className="w-8 h-8 text-emerald-400" />
+                </div>
+
+                <div className="flex-1">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+                    <div>
+                      <h3 className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors">
+                        Frontend Engineer
+                      </h3>
+                      <p className="text-lg text-zinc-400">Arkademi</p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium backdrop-blur-sm">
+                        Full-time
+                      </span>
+                      <span className="text-zinc-500 text-sm font-mono">
+                        2021 - 2026
+                      </span>
+                    </div>
+                  </div>
+
+                  <p className="text-zinc-300 leading-relaxed mb-6">
+                    At Arkademi, I started by working on the migration of the
+                    company&apos;s website from WordPress to React.js, utilizing
+                    technologies such as React.js, JavaScript, Redux, Bootstrap,
+                    and SCSS. This involved collaborating closely with the
+                    backend team for API integration and working with the
+                    product team to plan and discuss upcoming features. As the
+                    migration progressed, we transitioned several websites to
+                    Next.js to enhance performance and scalability.
+                  </p>
+
+                  {/* Key Achievements */}
+                  <div className="grid md:grid-cols-2 gap-4 mb-6">
+                    {[
+                      "Developing responsive websites and high-performance websites with a focus on SEO optimization",
+                      "Integrating with APIs and third-party libraries",
+                      "Migrating the website to React.js and later transitioning to Next.js to enhance performance, utilizing TypeScript for better code quality",
+                      "Contributing to the development of Arkademi's website in partnership with Kartu Prakerja, focusing on meeting the specific needs of the partner",
+                      "Developing an internal company website to assist with operational processes",
+                      "Managing tasks within my frontend team and collaborating with product and tech teams",
+                    ].map((item, i) => (
+                      <div key={i} className="flex items-start gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-emerald-500 mt-0.5 shrink-0" />
+                        <span className="text-zinc-400 text-sm">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <p className="text-zinc-300 leading-relaxed mb-6">
+                    Throughout my time at Arkademi, I gained experience in
+                    responsive web design, debugging, problem-solving, team
+                    collaboration, project management, web performance
+                    optimization, and SEO, all of which have been crucial in
+                    delivering high-quality web solutions.
+                  </p>
+
+                  <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap gap-2">
+                    {[
+                      "React",
+                      "Next.js",
+                      "TypeScript",
+                      "Redux Toolkit",
+                      "Zustand",
+                      "Tailwind CSS",
+                      "Bootstrap",
+                      "SCSS",
+                      "AI Integration",
+                    ].map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 bg-white/5 rounded-lg border border-white/10 text-xs text-zinc-400 font-mono hover:bg-white/10 transition-colors"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
 
           {/* 2. Freelance Section */}
           <div>
