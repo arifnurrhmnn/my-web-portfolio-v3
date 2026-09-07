@@ -84,14 +84,12 @@ export function Hero() {
             </div>
 
             <p className="text-zinc-400 text-base md:text-lg leading-relaxed max-w-2xl">
-              I am a Frontend Engineer from Indonesia with over 3 years of
-              experience in the field. Since 2022, I have been working at
-              Arkademi as a Frontend Engineer, and since 2023, I have been
-              taking on freelance projects as part of my side hustle. I
-              specialize in working with the Next.js framework and am passionate
-              about delivering high-quality, user-centric web solutions. I am
-              excited about the opportunity to collaborate and bring your ideas
-              to life.
+              I am a Frontend Engineer with over 4 years of experience building
+              modern web experiences. Currently, I work as a Web Specialist at
+              Bank Danamon, where I apply my frontend expertise while working
+              with Sitecore CMS in a digital marketing environment. I focus on
+              building responsive, high-performance, and user-centric websites
+              with a strong emphasis on SEO and web performance.
             </p>
           </motion.div>
 
@@ -228,11 +226,7 @@ export function Hero() {
                 line={
                   <>
                     {" "}
-                    <span className="text-blue-300">&lt;div</span>{" "}
-                    <span className="text-sky-300">className</span>=
-                    <span className="text-green-400">
-                      &quot;frontend-engineer&quot;
-                    </span>
+                    <span className="text-blue-300">&lt;div</span>
                     <span className="text-blue-300">&gt;</span>
                   </>
                 }
@@ -253,7 +247,7 @@ export function Hero() {
                 line={
                   <>
                     {" "}
-                    <span className="text-blue-300">&lt;Experience</span>
+                    <span className="text-blue-300">&lt;Developer</span>
                   </>
                 }
               />
@@ -262,9 +256,9 @@ export function Hero() {
                 line={
                   <>
                     {" "}
-                    <span className="text-sky-300">years</span>=
+                    <span className="text-sky-300">role</span>=
                     <span className="text-blue-300">{"{"}</span>
-                    <span className="text-yellow-300">3</span>
+                    <span className="text-yellow-300">Frontend Engineer</span>
                     <span className="text-blue-300">{"}"}</span>
                   </>
                 }
@@ -274,10 +268,12 @@ export function Hero() {
                 line={
                   <>
                     {" "}
-                    <span className="text-sky-300">skills</span>=
+                    <span className="text-sky-300">focus</span>=
                     <span className="text-blue-300">{"{"}</span>[&apos;
-                    <span className="text-yellow-300">React</span>&apos;, &apos;
-                    <span className="text-yellow-300">TS</span>&apos;]
+                    <span className="text-yellow-300">Web</span>&apos;, &apos;
+                    <span className="text-yellow-300">Performance</span>&apos;,
+                    &apos;
+                    <span className="text-yellow-300">SEO</span>&apos;]
                     <span className="text-blue-300">{"}"}</span>
                   </>
                 }

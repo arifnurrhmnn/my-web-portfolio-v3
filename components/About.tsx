@@ -84,13 +84,17 @@ export function About() {
                 <strong className="text-white font-semibold">
                   Frontend Engineer
                 </strong>{" "}
-                with over 3 years of professional experience, currently working
-                at{" "}
-                <strong className="text-white font-semibold">Arkademi</strong>.
+                with over 4 years of professional experience in web development.
+                Currently, I work as a{" "}
+                <strong className="text-white font-semibold">
+                  Web Specialist at Bank Danamon
+                </strong>{" "}
+                within the Digital Marketing team, where I bring my frontend
+                expertise into a corporate digital environment. .
               </p>
               <p>
-                My journey in technology began during high school when I majored
-                in Software Engineering, where I learned the fundamentals of
+                My journey in technology began in high school, where I majored
+                in Software Engineering and learned the fundamentals of
                 programming. I later pursued a degree in Informatics at{" "}
                 <strong className="text-white font-semibold">
                   Universitas Amikom Yogyakarta
@@ -100,20 +104,26 @@ export function About() {
                 .
               </p>
               <p>
-                In my career, I have contributed to significant projects such as
-                migrating Arkademi&apos;s website from WordPress to React.js and
-                transitioning it to Next.js to enhance performance and
-                scalability. I specialize in creating responsive,
-                high-performance websites with a focus on SEO optimization and
-                have collaborated closely with backend and product teams to
-                ensure successful project execution.
+                Throughout my career, I have worked across different areas of
+                web development. At Arkademi, I contributed to major projects,
+                including migrating the company's website from WordPress to
+                React.js and later transitioning it to Next.js to improve
+                performance and scalability. Currently at Bank Danamon, I apply
+                my frontend expertise as a Web Specialist, primarily working
+                with Sitecore CMS to manage the corporate website and develop
+                responsive landing pages. My role also involves implementing
+                on-page SEO and optimizing web performance to support digital
+                marketing and product initiatives.
               </p>
               <p>
-                Additionally, I have managed freelance projects, delivering
-                tailored web solutions for clients both locally and
-                internationally. I am passionate about building user-centric web
-                applications and continuously improving my skills to stay ahead
-                in the ever-evolving tech landscape.{" "}
+                These experiences have strengthened my expertise in responsive
+                web development, frontend technologies, CMS management, SEO, and
+                web performance optimization, while also giving me valuable
+                experience collaborating with product, technology, and marketing
+                teams. In addition to my professional work, I have managed
+                freelance projects for both local and international clients. I
+                am passionate about building high-quality web experiences and
+                continuously expanding my skills as web technologies evolve.{" "}
                 <strong className="text-emerald-400">
                   Let&apos;s create something amazing together!
                 </strong>
