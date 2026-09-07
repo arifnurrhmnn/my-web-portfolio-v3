@@ -4,6 +4,10 @@ import React from "react";
 import Image from "next/image";
 
 const technologies = [
+{
+    name: "Sitecore",
+    icon: "https://cdn.simpleicons.org/sitecore/EB1F1F",
+  },
   {
     name: "React",
     icon: "https://cdn.simpleicons.org/react/61DAFB",
