@@ -9,7 +9,7 @@ import { Button } from "./ui/button";
 export function About() {
   const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/file/Arif Nur Rohman - Frontend Engineer - CV.pdf";
+    link.href = "/file/241026/Arif Nur Rohman - Frontend Engineer - CV.pdf";
     link.download = "Arif Nur Rohman - Frontend Engineer - CV.pdf";
     document.body.appendChild(link);
     link.click();
@@ -106,7 +106,7 @@ export function About() {
               <p>
                 Throughout my career, I have worked across different areas of
                 web development. At Arkademi, I contributed to major projects,
-                including migrating the company's website from WordPress to
+                including migrating the company&apos;s website from WordPress to
                 React.js and later transitioning it to Next.js to improve
                 performance and scalability. Currently at Bank Danamon, I apply
                 my frontend expertise as a Web Specialist, primarily working
