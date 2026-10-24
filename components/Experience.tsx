@@ -147,7 +147,7 @@ export function Experience() {
                         Full-time
                       </span>
                       <span className="text-zinc-500 text-sm font-mono">
-                        2021 - 2026
+                        2022 - 2026
                       </span>
                     </div>
                   </div>
